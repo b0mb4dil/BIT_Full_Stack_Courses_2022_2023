@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paštomatai</title>
+    <style> 
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        
+
+
+        h2 {
+            font-size: .9em;
+            text-align: left;
+            margin-left: 15px;
+            padding-bottom: 5px;
+            border-bottom: 0.5px solid #d7d7d7;
+        }
+        h3 {
+            font-size: .9em;
+        }
+
+        h4 {
+            font-size: .9em;
+            color: #333;
+            font-weight: 100;
+            margin-bottom: 5px;
+
+
+        }
+
+        h5 {
+            font-weight: 300;
+            color: #9c9999;
+        }
+
+        .logo {
+            height: 25px;
+            width: 100px;
+            margin-top: 15px;
+        }
+
+
+        .delivery-all {
+            border: 1px solid #d7d7d7;
+            padding: 5px;
+            margin: auto;
+            max-width: 1000px;
+            text-align: center;
+            background-color: #f5f5f5;
+            
+        }
+
+        .delivery {
+            background-color: white;
+            border: 1px solid #d7d7d7;
+            display: inline-block;
+            width: 300px;
+            height: 200px;
+            text-align: center;
+            margin: 5px;  
+            padding: 5px;
+        }
+        
+        .delivery-adress {
+            display: inline-block;
+            width: 48%;
+            margin-left: 5px;
+            text-align: left;
+        }
+
+        .user-input {
+            border: 1px solid;
+            border-color: #b8b8b8;            
+            border-radius: 0;
+            width: 95%;
+            height: 40px;
+            padding-left: 5px;
+            margin-bottom: 20px;
+        }
+
+        .div-all {
+            text-align: left;
+            margin-left: 15px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="delivery-all">
+        <h2>Pristatymas į paštomatus</h2>
+        <div class="delivery">
+            <label>
+                <input type="radio" name="pashtomat" required>
+                <div>
+                    <img class="logo" src="images/lp-express-logo.png">
+                    <h3>Atsiėmimas LP EXPRESS paštomate</h3>
+                    <h5>2-4 darbo dienos</h5>
+                    <h3>1,99 €</h3>
+                </div>
+            </label>
+        </div>
+        <div class="delivery">
+            <label>
+                <input type="radio" name="pashtomat" required>
+                <div>
+                    <img class="logo" src="images/omniva-logo.png">
+                    <h3>Atsiėmimas Omniva paštomate</h3>
+                    <h5>2-4 darbo dienos</h5>
+                    <h3>1,99 €</h3>
+                </div>
+            </label>
+        </div>
+        <div class="delivery">
+            <label>
+                <input type="radio" name="pashtomat" required>
+                <div>
+                    <img class="logo" src="images/dpd-logo.png">
+                    <h3>Atsiėmimas DPD paštomate</h3>
+                    <h5>2-4 darbo dienos</h5>
+                    <h3>1,99 €</h3>
+                </div>
+            </label>
+        </div>
+        <h2>Pasirinkite pristatymo vietą</h2>
+        <div class="div-all">
+            <div class="delivery-adress">
+                <h4>Miestas</h4>
+                <select class="user-input" required>
+                    <option value="1">Kuršėnai</option>
+                    <option value="2">Vilnius</option>
+                    <option value="3">Kaunas</option>
+                    <option value="4">Kužiai</option>
+                    <option value="5">Šiauliai</option>
+                    <option value="6">Smilgiai</option>
+                    <option value="7">Drąsučiai</option>
+                    <option value="8">Pavenčiai</option>
+                </select>
+            </div>
+            <div class="delivery-adress">
+                <h4>Paštomato adresas (paštomatas)</h4>
+                <select class="user-input" required>
+                    <option value="1">MAXIMA, Vilngiaus g. 4</option>
+                    <option value="2">IKI, Pavenčio g. 17</option>
+                    <option value="3">Norfa XXL, Vytauto g. 67</option>
+                    <option value="4">Norfa, Basanavičiaus g. 1</option>
+                </select>
+            </div>
+        </div>
+
+
+        <h2>Pateikite gavėjo duomenis</h2>
+        <div class="div-all">
+            <div class="delivery-adress">
+                <h4>Vardas</h4>
+                <input class="user-input" type="text" placeholder="Vardenis" required>
+            </div>
+            <div class="delivery-adress">
+                <h4>Pavardė</h4>
+                <input class="user-input" type="text" placeholder="Pavardenis" required>
+            </div>
+            <div class="delivery-adress">
+                <h4>Mobilaus telefono numeris</h4>
+                <input class="user-input" type="tel" placeholder="+37060012345" required>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
