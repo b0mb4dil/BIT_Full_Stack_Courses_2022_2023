@@ -1,0 +1,44 @@
+* {
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    margin: 0;
+    background-color: purple;
+}
+
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+    align-items: center;
+}
+
+header {
+    padding: 10px;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+}
+
+header .logo img {
+    max-width: 160px;
+}
+
+header nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    font-size: 15px;
+}
+
+header nav a {
+    color: white;
+    opacity: 0.8;
+    text-decoration: none;
+    display: block;
+    padding: 15px;
+    
+}
