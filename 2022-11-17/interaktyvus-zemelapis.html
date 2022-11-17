@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interaktyvus žemėlapis</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1.1em;
+        }
+
+        .map {
+            background: url(images/mapsas.jpg) no-repeat top left;
+            width: 1084px;
+            height: 1191px;
+            margin: 0 auto;
+            position: relative;
+            align-content: center;
+
+        }
+        .map-link {
+            display: flex;
+            position: absolute;
+            opacity: 0;
+            text-decoration: none;
+            transition: all .3s ease-in-out;
+            
+        }
+        .link1 {
+            width: 80px;
+            height: 50px; 
+            top: 85px;
+            left: 177px;
+        }
+        .link2 {
+            width: 220px;
+            height: 120px; 
+            top: 690px;
+            left: 640px;
+        }
+        .link3 {
+            width: 360px;
+            height: 80px; 
+            top: 600px;
+            left: 70px;
+        }
+        .map-link:hover {
+            opacity: 1;
+        }
+
+        .map-link span {
+            color: black;
+            background-color: rgba(255, 255, 255, 0.6);
+            border: 1px solid gray;
+            border-radius: 5px;
+            padding: 5px;
+            text-transform: uppercase;
+            margin: auto;
+            text-align: center;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="map">
+        <a href="#" class="map-link link1">
+            <span>Vila "Romovė"</span>
+        </a>
+        <a href="#" class="map-link link2">
+            <span>Hipodromas</span>
+        </a>
+        <a href="#" class="map-link link3">
+            <span>Viešbutis</span>
+        </a>
+    </div>
+</body>
+</html>
