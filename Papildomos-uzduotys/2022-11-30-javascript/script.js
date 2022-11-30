@@ -29,6 +29,7 @@ console.log(celebrityNew)
 let string = 'Once upon a time in hollywood'
 string = string.replaceAll('o', '*').replaceAll('O', '*')
 console.log(string)
+console.log('---------------------------------------------------------------')
 
 
 
@@ -38,10 +39,14 @@ console.log(string)
 function getRandomInt(min, max) {
     min = Math.ceil(min);
     max = Math.floor(max);
-    return Math.random() * (max - min) + min
+    return Math.floor(Math.random() * (max - min) + min);
 }
 
-let randomNumber = getRandomInt(0, 2)
+let randomNumber1 = getRandomInt(0, 3)
+let randomNumber2 = getRandomInt(0, 3)
+let randomNumber3 = getRandomInt(0, 3)
+let randomNumber4 = getRandomInt(0, 3)
+let randomNumber = String(randomNumber1) + String(randomNumber2) + String(randomNumber3) + String(randomNumber4)
 
 // Paverčiu į array //
 const arr = String(randomNumber).split('').map(str => Number(str));
@@ -55,5 +60,17 @@ let twos = arr.filter(x => x === 2).length
 console.log('---Penkta užduotis---')
 console.log(`Atsitiktinis skaičius: ${randomNumber}`)
 console.log(`Nulių yra: ${zeros}, vienetų: ${ones}, dvejetų: ${twos}`)
+console.log('---------------------------------------------------------------')
 
+// Task - 5, antras variantas //
+let x1 = Math.floor(Math.random() * 3);
+let x2 = Math.floor(Math.random() * 3);
+let x3 = Math.floor(Math.random() * 3);
+let x4 = Math.floor(Math.random() * 3);
 
+let result = String(x1) + String(x2) + String(x3) + String(x4)
+
+console.log("Sugeneruoti skaičiai: " + result);
+console.log("Skaičių 0 yra: " + (result.length - result.replaceAll('0', '').length));
+console.log("Skaičių 1 yra: " + (result.length - result.replaceAll('1', '').length));
+console.log("Skaičių 2 yra: " + (result.length - result.replaceAll('2', '').length));
