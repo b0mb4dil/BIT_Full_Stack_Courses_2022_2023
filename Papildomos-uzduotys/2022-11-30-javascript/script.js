@@ -29,7 +29,6 @@ console.log(celebrityNew)
 let string = 'Once upon a time in hollywood'
 string = string.replaceAll('o', '*').replaceAll('O', '*')
 console.log(string)
-console.log('---------------------------------------------------------------')
 
 
 
@@ -46,10 +45,10 @@ let randomNumber1 = getRandomInt(0, 3)
 let randomNumber2 = getRandomInt(0, 3)
 let randomNumber3 = getRandomInt(0, 3)
 let randomNumber4 = getRandomInt(0, 3)
-let randomNumber = String(randomNumber1) + String(randomNumber2) + String(randomNumber3) + String(randomNumber4)
+let arr = []
 
 // Paverčiu į array //
-const arr = String(randomNumber).split('').map(str => Number(str));
+arr.push(randomNumber1, randomNumber2, randomNumber3, randomNumber4)
 
 // Filtruoju gautą array pagal reikalingas x reikšmes ir su .length gauna išfiltruotų reikšmių skaičių //  
 let zeros = arr.filter(x => x === 0).length
@@ -57,12 +56,33 @@ let ones = arr.filter(x => x === 1).length
 let twos = arr.filter(x => x === 2).length
 
 
-console.log('---Penkta užduotis---')
-console.log(`Atsitiktinis skaičius: ${randomNumber}`)
+// Tas pats pirmas variantas, tik su "for" //
+let zero0 = 0
+let one1 = 0
+let two2 = 0
+
+for (let i = 0; i < arr.length; i++) {
+    if (arr[i] === 0) {
+        zero0++;
+    } else if (arr[i] === 1) {
+        one1++;
+    } else {
+        two2++;
+    }
+}
+console.log(arr)
+console.log(`**For*loop** nulių: ${zero0}, vienetų: ${one1}, dvejetų: ${two2}`)
+
+console.log('-------------------------------')
+console.log('Task - 5 - Pirmas variantas -')
+console.log(`Atsitiktinis skaičius: ${arr}`)
 console.log(`Nulių yra: ${zeros}, vienetų: ${ones}, dvejetų: ${twos}`)
 console.log('---------------------------------------------------------------')
 
+// ---------------------------//
 // Task - 5, antras variantas //
+console.log('-------------------------------')
+console.log('Task - 5 - Antras variantas -')
 let x1 = Math.floor(Math.random() * 3);
 let x2 = Math.floor(Math.random() * 3);
 let x3 = Math.floor(Math.random() * 3);
@@ -74,3 +94,50 @@ console.log("Sugeneruoti skaičiai: " + result);
 console.log("Skaičių 0 yra: " + (result.length - result.replaceAll('0', '').length));
 console.log("Skaičių 1 yra: " + (result.length - result.replaceAll('1', '').length));
 console.log("Skaičių 2 yra: " + (result.length - result.replaceAll('2', '').length));
+
+// --------------------------- //
+// Task - 5, trecias variantas //
+console.log('-------------------------------')
+console.log('Task - 5 - Trečias variantas -')
+let nuliai=0;
+let vienetai=0;
+let dvejetai=0;
+
+let rnd1 = Math.floor(Math.random()* 3)
+if (rnd1==0){
+    nuliai++;
+}else if(rnd1==1){
+    vienetai++;
+}else{
+    dvejetai++;
+}
+
+let rnd2 = Math.floor(Math.random() * 3);
+if (rnd2==0){
+    nuliai++;
+}else if(rnd2==1){
+    vienetai++;
+}else{
+    dvejetai++;
+}
+
+let rnd3 = Math.floor(Math.random() * 3);
+if (rnd3==0){
+    nuliai++;
+}else if(rnd3==1){
+    vienetai++;
+}else{
+    dvejetai++;
+}
+
+let rnd4 = Math.floor(Math.random() * 3);
+if (rnd4==0){
+    nuliai++;
+}else if(rnd4==1){
+    vienetai++;
+}else{
+    dvejetai++;
+}
+
+console.log('atsitiktiniai skaičiai:', rnd1, rnd2, rnd3, rnd4);
+console.log('nulių-',nuliai, 'vienetų-',vienetai, 'dvejetų-', dvejetai);
