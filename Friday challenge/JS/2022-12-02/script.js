@@ -53,9 +53,9 @@ console.log(`Vidurkis be < 10 ir > 90 skaičių: ${averageBelowAbove}`)
 console.log('-----Task - 3-----')
 console.log('------------------')
 
-let randHour = rand(23, 23)
-let randMinute = rand(50, 59)
-let randSecond = rand(50, 59)
+let randHour = rand(0, 23)
+let randMinute = rand(0, 59)
+let randSecond = rand(0, 59)
 
 
 
