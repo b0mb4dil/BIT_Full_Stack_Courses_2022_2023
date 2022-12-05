@@ -4,19 +4,25 @@ console.log('-----Task - 1-----')
 function getRandomInt(min, max) {
     min = Math.ceil(min);
     max = Math.floor(max);
-    return Math.random() * (max - min + 1) + min;
+    return Math.floor(Math.random() * (max - min + 1) + min);
 }
 
 let rand1 = getRandomInt(0, 4)
 let rand2 = getRandomInt(0, 4)
 if (rand1 >= rand2) {
-    let result = rand2/rand1;
+    if (rand2 === 0) {
+        console.log('Dalyba iš nulio negalima')
+    }
+    let result = rand1/rand2;
     console.log(`Atsitiktiniai skaičiai: rand1 ${rand1}, rand2 ${rand2}`);
     console.log(`Atsakymas: ${result}`);
     let resultRounded = parseFloat(result.toFixed(2));
     console.log(`Suapvalintas rezultatas: ${resultRounded}`);
 } else {
-    let result = rand1/rand2;
+    if (rand1 === 0) {
+        console.log('Dalyba iš nulio negalima')
+    } 
+    let result = rand2/rand1;
     console.log(`Atsitiktiniai skaičiai: rand1 ${rand1}, rand2 ${rand2}`);
     console.log(`Atsakymas: ${result}`);
     let resultRounded = result.toFixed(2);
@@ -61,16 +67,15 @@ console.log('-----Task - 3-----')
 let starName = 'Bruce'
 let starSurname = 'Lee'
 
-let newStar = starName.substring(starName.length - 3) + starSurname.substring(starSurname.length - 3);
-console.log(newStar);
+console.log(starName, starSurname,'inicialai:' ,starName[0] + starSurname[0]);
 
 // Task - 4
 console.log('-----Task - 4-----')
 
 let abc = 'abcdefghijklmnopqrstuvwxyz'
-let letterOneIndex = getRandomIntFloor(0, 26)
-let letterTwoIndex = getRandomIntFloor(0, 26)
-let letterThreeIndex = getRandomIntFloor(0, 26)
+let letterOneIndex = getRandomIntFloor(0, (abc.length - 1))
+let letterTwoIndex = getRandomIntFloor(0, (abc.length - 1))
+let letterThreeIndex = getRandomIntFloor(0, (abc.length - 1))
 
 let resultLetters = abc[letterOneIndex] + abc[letterTwoIndex] + abc[letterThreeIndex];
 console.log(`Raidžių index'ai: pirmos ${letterOneIndex}, antros ${letterTwoIndex}, trečios ${letterThreeIndex}`)
