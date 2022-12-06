@@ -61,10 +61,6 @@ let string4arr = string4.split('')
 
 
 const vowels = ['A', 'a', 'E', 'e', 'I', 'i', 'O', 'o', 'U', 'u']
-let string1result = []
-let string2result = []
-let string3result = []
-let string4result = []
 
 for (let i = 0; i < string1arr.length; i++) {
     for (let j = 0; j < vowels.length; j++) {
@@ -109,6 +105,8 @@ let data150 = []
 for (let i = 0; i < 300; i++) {
     data[i] = rand(0, 300)
 }
+document.write('<br><br>')
+document.write(data)
 for (let i = 0; i < data.length; i++) {
     if (data[i] > 150) {
         data150.push(data[i])
@@ -124,11 +122,11 @@ console.log(data150.length)
 
 // Task - 5 //
 // Vienoje eilutėje atspausdinkite visus skaičius nuo 1 iki 3000, kurie dalijasi iš 77 be liekanos. Skaičius atskirkite kableliais. Po paskutinio skaičiaus kablelio neturi būti. Jeigu reikia, panaudokite css, kad visi rezultatai matytųsi ekrane.
+document.write('<br><br>')
 for (let i = 0; i < 3000; i++) {
-    if (i % 77 === 0) {
-        document.write('<br>')
+    if (i % 77 === 0 && i > 0) {
+        document.write(', ')
         document.write(i);
     }
     
 }
-document.write('<br>')
