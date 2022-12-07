@@ -25,11 +25,9 @@ document.write(`<h${randomH}>h${randomH}</h${randomH}>`)
 
 // Task - 2 //
 // Naudokite funkcija rand(). Atspausdinkite 3 skaičius nuo -10 iki 10. Skaičiai mažesni už 0 turi būti žali, 0 - raudonas, didesni už 0 mėlyni.
-let rand1 = rand(-10, 10)
-let rand2 = rand(-10, 10)
-let rand3 = rand(-10, 10)
-let randArray = [rand1, rand2, rand3]
-for (let i = 0; i < randArray.length; i++) {
+let randArray = []
+for (let i = 0; i < 3; i++) {
+    randArray.push(rand(-10, 10))
     if (randArray[i] < 0) {
         document.write(`<br><span style="color: green;">${randArray[i]}</span>`)
     }
@@ -102,11 +100,13 @@ console.log(string4arr.join(''))
 let data = []
 let data150 = []
 
-for (let i = 0; i < 300; i++) {
+for (let i = 0; i < 20; i++) {
     data[i] = rand(0, 300)
+    if (data[i] > 275) {
+        document.write(`<span style="color: red;">${data[i]}</span>`)
+    }
+        document.write(data)
 }
-document.write('<br><br>')
-document.write(data)
 for (let i = 0; i < data.length; i++) {
     if (data[i] > 150) {
         data150.push(data[i])
@@ -125,8 +125,8 @@ console.log(data150.length)
 document.write('<br><br>')
 for (let i = 0; i < 3000; i++) {
     if (i % 77 === 0 && i > 0) {
-        document.write(', ')
         document.write(i);
+        document.write(', ')
     }
     
 }
