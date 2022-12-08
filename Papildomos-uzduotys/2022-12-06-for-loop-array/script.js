@@ -43,6 +43,7 @@ for (let i = 0; i < 200; i++) {
     if (coinFlip[i] === 0) {
         trysHerbai.push(coinFlip[i])
         console.log('Iškrito herbas');
+        //break;
     } 
     if (coinFlip[i - 0] === 0 && coinFlip[i - 1] === 0 && coinFlip[i - 2] === 0) {
         console.log('Tris kartus iš eilės iškrito herbas');
@@ -96,7 +97,7 @@ for (let i = 0; i < array30.length; i++) {
 
 console.log('Masyvas: ', array30)
 console.log('Virš 10 reikšmių: ', above10)
-console.log('Maksimali reikšmė: ',max)
+console.log('Maksimali reikšmė: ', max)
 console.log('Maksimalios reikšmės indexai: ', indexes);
 
 // c)
@@ -104,16 +105,21 @@ console.log('Maksimalios reikšmės indexai: ', indexes);
 console.log('5. c) >>>>>>>>')
 
 let evenIndexes = []
+let sum = 0
+
 for (let i = 0; i < array30.length; i++) {
     if (i % 2 === 0 && i > 0) {
         evenIndexes.push(array30[i])
+        sum += array30[i]
     }
 }
 let sumOfEvenIndexes = evenIndexes.reduce((accumulator, value) => {
     return accumulator + value;
 }, 0);
+
 console.log('Lyginių indexų reikšmės:', evenIndexes)
 console.log('Lyginių indexų reikšmių suma:', sumOfEvenIndexes)
+console.log('Lyginių indexų reikšmių suma:', sum)
 
 // d)
 // Sukurkite naują masyvą, kurio reikšmės yra 1 uždavinio masyvo reikšmes minus tos reikšmės indeksas;
@@ -124,8 +130,8 @@ let newArray = []
 for (let i = 0; i < array30.length; i++) {
     newArray.push(array30[i] - i)
 }
-
-console.log('New Array: ', newArray)
+console.log('Orginalus masyvas: ', array30)
+console.log('Naujas išminusuotas masyvas: ', newArray)
 
 // e)
 // Papildykite masyvą papildomais 10 elementų su reikšmėmis nuo 5 iki 25, kad bendras masyvas padidėtų iki indekso 39;
@@ -144,10 +150,10 @@ let evenArrayOf = []
 let unevenArrayOf = []
 
 for (let i = 0; i < array30.length; i++) {
-    if (i % 2 === 0 && i > 0) {
+    if (array30[i] % 2 === 0 && i > 0) {
         evenArrayOf.push(array30[i])
     }
-    if (i % 2 != 0 && i > 0) {
+    if (array30[i] % 2 != 0 && i > 0) {
         unevenArrayOf.push(array30[i])
     }
 }
@@ -164,7 +170,7 @@ for (let i = 0; i < evenArrayOf.length; i++) {
         evenArrayOf[i] = 0;
     }
 }
-console.log('Reikšmės, didesnės už 15 paverstos į 0',evenArrayOf)
+console.log('Reikšmės, didesnės už 15 paverstos į 0: ',evenArrayOf)
 
 // h)
 // Iš masyvo ištrinkite visus elementus, kurių reikšmė didesnė už 10;

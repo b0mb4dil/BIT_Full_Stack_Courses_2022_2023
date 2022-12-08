@@ -64,6 +64,7 @@ for (let i = 0; i < string1arr.length; i++) {
     for (let j = 0; j < vowels.length; j++) {
         if (string1arr[i] === vowels[j]) {
             string1arr.splice(i, 1)
+            i--;
         }
     }
 }
@@ -71,6 +72,7 @@ for (let i = 0; i < string2arr.length; i++) {
     for (let j = 0; j < vowels.length; j++) {
         if (string2arr[i] === vowels[j]) {
             string2arr.splice(i, 1)
+            i--;
         }
     }
 }
@@ -78,6 +80,7 @@ for (let i = 0; i < string3arr.length; i++) {
     for (let j = 0; j < vowels.length; j++) {
         if (string3arr[i] === vowels[j]) {
             string3arr.splice(i, 1)
+            i--;
         }
     }
 }
@@ -85,6 +88,7 @@ for (let i = 0; i < string4arr.length; i++) {
     for (let j = 0; j < vowels.length; j++) {
         if (string4arr[i] === vowels[j]) {
             string4arr.splice(i, 1)
+            i--;
         }
     }
 }
@@ -97,36 +101,36 @@ console.log(string4arr.join(''))
 // Task - 4 //
 // Sugeneruokite 300 atsitiktinių skaičių nuo 0 iki 300, atspausdinkite juos atskirtus tarpais ir suskaičiuokite kiek tarp jų yra didesnių už 150.  Skaičiai didesni nei 275 turi būti raudonos spalvos.
 
-let data = []
-let data150 = []
+let counter = 0
+let result = ''
 
 for (let i = 0; i < 20; i++) {
-    data[i] = rand(0, 300)
-    if (data[i] > 275) {
-        document.write(`<span style="color: red;">${data[i]}</span>`)
+    const number = rand(0, 300)
+
+    if (number > 150) {
+        counter++;
     }
-        document.write(data)
-}
-for (let i = 0; i < data.length; i++) {
-    if (data[i] > 150) {
-        data150.push(data[i])
-    }
+    if (number > 275) {
+        result += '<span style="color: red; ">' + number + ' ' +'</span>';
+    } else {
+        result += number + ' '
+    }    
 }
 
-console.log(data)
-console.log(data.length)
+document.write('<br>Rezultatas: ', result)
 
-console.log(data150)
-console.log(data150.length)
+
 
 
 // Task - 5 //
 // Vienoje eilutėje atspausdinkite visus skaičius nuo 1 iki 3000, kurie dalijasi iš 77 be liekanos. Skaičius atskirkite kableliais. Po paskutinio skaičiaus kablelio neturi būti. Jeigu reikia, panaudokite css, kad visi rezultatai matytųsi ekrane.
 document.write('<br><br>')
-for (let i = 0; i < 3000; i++) {
-    if (i % 77 === 0 && i > 0) {
-        document.write(i);
-        document.write(', ')
+
+for (let i = 1; i < 3000; i++) {
+    if (i % 77 === 0) {
+        document.write(i + ", ");
     }
-    
+    if (i === 2926) {
+        document.write(i + ".");
+    }
 }
