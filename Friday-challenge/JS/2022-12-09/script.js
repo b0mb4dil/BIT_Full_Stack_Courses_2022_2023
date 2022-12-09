@@ -17,6 +17,8 @@ let countC = 0
 let countD = 0
 for (let i = 0; i < 200; i++) {
     letterArrayNum.push(rand(0, 3))
+}
+for (let i = 0; i < letterArrayNum.length; i++) {
     if (letterArrayNum[i] === 0) {
         letterArray.push('A')
         countA++;
@@ -34,6 +36,7 @@ for (let i = 0; i < 200; i++) {
         countD++;
     }
 }
+
 
 console.log('Raidžių masyvas: ',letterArray)
 console.log('Raidžių A yra: ', countA)
