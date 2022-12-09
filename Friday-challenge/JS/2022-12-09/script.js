@@ -56,53 +56,45 @@ console.log('Raidžių masyvas didėjimo tvarka: ', letterArray.sort())
 // Unikali kombinacija masyve (AAA): ['ABC', 'ABC', 'ABC', 'AAA'];
 console.log('3. >>>>>>>>')
 
-function letterGenerator(index1, index2) {
-    randomLetter = rand(index1, index2)
-    if (randomLetter === 0) {
-        return 'A';
-    }
-    if (randomLetter === 1) {
-        return 'B';
-    }
-    if (randomLetter === 2) {
-        return 'C';
-    }
-    if (randomLetter === 3) {
-        return 'D';
-    }
-}
-
+const stringABCD = 'ABCD'
 let array1 = []
 let array2 = []
 let array3 = []
 let combination = ''
 
 for (let i = 0; i < 100; i++) {
-    if (combination.length < 3) {
-        combination += letterGenerator(0, 3)
-        // console.log(combination)
-    } else {
-        combination = ''
-    }
-    if (combination.length === 3 && array1.length < 4) {
-        array1.push(combination)
-    } else if (combination.length === 3 && array2.length < 4) {
-        array2.push(combination)
-    } else if (combination.length === 3 && array3.length < 4) {
-        array3.push(combination)
-    }
+    let letter = stringABCD[rand(0, stringABCD.length - 1)]
+    array1.push(letter);
+
+    letter = stringABCD[rand(0, stringABCD.length - 1)]
+    array2.push(letter);
+
+    letter = stringABCD[rand(0, stringABCD.length - 1)]
+    array3.push(letter);
 }
 console.log('Pirmas masyvas:', array1)
 console.log('Antras masyvas:',array2)
 console.log('Trečias masyvas:',array3)
+
+const arrayCombined = []
+let uniqueValue = 0
+for (let i = 0; i < array1.length; i++) {
+	arrayCombined.push(array1[i] + array2[i] + array3[i]);
+    if (array1[i] !== array2[i] && array1[i] !== array3[i] && array2[i] !== array3[i]) {
+        uniqueValue++;
+    }
+}
+
+console.log(arrayCombined);
+
 // Task - 3
 // Unikalios kombinacijos:
-let uniqueCombinations = array1.length
+let uniqueCombinations = arrayCombined.length
 
-for (let i = 0; i < array1.length; i++) {
-    for (let j = 0; j < array1.length; j++) {
+for (let i = 0; i < arrayCombined.length; i++) {
+    for (let j = 0; j < arrayCombined.length; j++) {
         if (i !== j) {
-            if (array1[i] === array1[j]) {
+            if (arrayCombined[i] === arrayCombined[j]) {
                 uniqueCombinations--;
                 break;
             }
@@ -110,7 +102,8 @@ for (let i = 0; i < array1.length; i++) {
     }
 }
 
-console.log('Unikalios kombinacijos pirmame masyve: ', uniqueCombinations)
+console.log('Unikalios kombinacijos: ', uniqueCombinations)
+console.log('Unikalios reikšmės: ', uniqueValue)
 
 // Task - 4
 // Sugeneruokite du masyvus, kurių reikšmės yra atsitiktiniai skaičiai nuo 100 iki 999. Masyvų ilgiai 100. Masyvų reikšmės turi būti unikalios savo masyve (t.y. neturi kartotis).
@@ -118,6 +111,13 @@ console.log('4. >>>>>>>>')
 
 let numArray1 = []
 let numArray2 = []
+
+const masyvas = [];
+
+// while(masyvas.length <= 200) {
+//     if(!check)
+//     numArray1.push(res);
+// }
 
 for (let i = 0; i < 100; i++) {
     let number = rand(100, 999)
