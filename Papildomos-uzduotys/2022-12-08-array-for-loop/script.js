@@ -63,7 +63,7 @@ for (let i = 0; i < 5; i++) {
 }
 // b)
 // for (let i = 0; i < 5; i++) {
-//     for (let j = 0; j < 5; j++) {
+//     for (let j = 0; j < 10; j++) {
 //         hammerHits.push(rand(20, 30)*rand(0, 1))
 //         hammerDamage += hammerHits[j]
 //         if (hammerDamage >= nailLength) {
@@ -77,7 +77,7 @@ for (let i = 0; i < 5; i++) {
 
 console.log('Įkalta vinių:', nailsHammered)
 console.log('Reikėjo ' + hammerHits.length + ' plaktuko smūgių, kad įkalti 5 vinis.')
-
+console.log(hammerHits)
 
 // Task - 3
 // Sugeneruokite stringą, kurį sudarytų 50 atsitiktinių skaičių nuo 1 iki 200, atskirtų tarpais. Skaičiai turi būti unikalūs (t.y. nesikartoti). Sugeneruokite antrą stringą, pasinaudodami pirmu, palikdami jame tik pirminius skaičius (t.y tokius, kurie dalinasi be liekanos tik iš 1 ir patys savęs). Skaičius stringe sudėliokite didėjimo tvarka, nuo mažiausio iki didžiausio.

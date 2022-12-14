@@ -4,19 +4,21 @@
 greeting = (name) => {
     return `Hello, ${name}`;
 }
+// greeting = name => `Hello, ${name}`; Alternatyvus užrašymas.
 
 console.log(greeting('Eivydas'))
 
 // Task - 2
 // Sukurkite funkciją  kuri priimtų vieną parametrą (tekstą) ir grąžintų atsakymą kiek simbolių yra tame tekste. Iš funkcijos gautą rezultatą atvaizduokite naršyklėje.
 
-function symbolCount(string) {
+symbolCount = (string) => {
     return string.length;
 }
+// symbolCount = string => string.length; Alternatyvus užrašymas.
 
 console.log(symbolCount('Tekstas'))
 
-// Task - 3
+// Task - 3 (1 variantas)
 // Sukurkite funkciją kuri priimtų du parametrus "name" ir "last_name". Funkcija turi grąžinti vieną stringą, kuriame būtų vardas ir pavardė prasidedantys didžiosiomis raidėmis.
 
 function nameLastname(name, lastname) {
@@ -30,8 +32,23 @@ function nameLastname(name, lastname) {
 
     return nameArray.join('') + ' ' + lastnameArray.join('');
 }
- 
+console.log('3 užduotis - 1 variantas')
 console.log(nameLastname('eivydas', 'gricius'))
+
+// Task - 3 (2 variantas)
+
+function capitalize (name, last_name) {
+    let nameLetter = name[0].toUpperCase()
+    let last_nameLetter = last_name[0].toUpperCase()
+
+    name = nameLetter + name.slice(1)
+    last_name = last_nameLetter + last_name.slice(1)
+    console.log('3 užduotis - 2 variantas')
+    console.log(name, last_name)
+}
+
+capitalize('eivydas', 'gricius')
+
 
 // Task - 4
 // Parašykite funkciją kuri sugeneruotų 3 random skaičius nuo 0 iki 5 ir atspausdintų konsolėje vienoje eilutėje atskirtus kableliais. Po paskutinio skaičiaus kablelio neturi būti.
@@ -56,6 +73,7 @@ console.log(generate3())
 
 function randomNumberArray(from, to, limit) {
     let array = [];
+    
     if (isNaN(from) || isNaN(to) || isNaN(limit)) {
         return 'Duomenų įvedimo klaida.';
     } else {
@@ -67,3 +85,4 @@ function randomNumberArray(from, to, limit) {
 }
 
 console.log(randomNumberArray(1, 10, 5))
+
