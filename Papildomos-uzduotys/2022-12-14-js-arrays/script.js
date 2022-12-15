@@ -32,7 +32,7 @@ for (let j = 0; j < 10; j++) {
 
     for (let i = 0; i < randomElementCount; i++) {
         if (arrayInside.length < randomElementCount) {
-            arrayInside[i] = az[rand(0, 25)]
+            arrayInside[i] = az[rand(0, az.length - 1)]
         }
         if (arrayInside.length === randomElementCount) {
             arrayTotal.push(arrayInside.sort())
