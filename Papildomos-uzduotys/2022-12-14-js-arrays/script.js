@@ -11,7 +11,7 @@ function rand(min, max) {
 let array = []
 
 for (let i = 0; i < 10; i++) {
-    if (array.length <= 2) {
+    if (array.length < 2) {
         array[i] = rand(5, 25)
     } else {
         array[i] = array[array.length - 1] + array[array.length - 2]
@@ -26,6 +26,7 @@ console.log(array)
 let arrayTotal = []
 let az = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
 let arrayInside = []
+
 
 for (let j = 0; j < 10; j++) {
     let randomElementCount = rand(2, 20)

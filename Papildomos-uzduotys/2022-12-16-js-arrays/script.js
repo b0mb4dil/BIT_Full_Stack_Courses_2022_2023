@@ -135,10 +135,10 @@ let randomArray = []
 let arrayToPush = []
 
 for (let i = 0; i < 10; i++) {
-    let arrayLength = rand(0, 1)
+    let arrayLength = rand(0, 5)
 
     if (arrayLength === 0) {
-        randomArray[i] = rand(99 ,99);
+        randomArray[i] = rand(0 ,10);
     } else {
         arrayToPush = []
         for (let j = 0; j < arrayLength; j++) {
@@ -157,7 +157,7 @@ console.log(randomArray)
 console.log('<<<<< 4 užduotis >>>>>')
 
 
-
+// Masyvo sumos skaičiavimo funkcija
 function arrSum(arr) {
     let sumOfArray = 0;
     for (let i = 0; i < arr.length; i++) {
@@ -169,5 +169,48 @@ function arrSum(arr) {
     }
     return sumOfArray;
 }
-
+// Masyvo suma
 console.log(arrSum(randomArray))
+
+
+let sortedArrayNew = []
+
+for (let i = 0; i < randomArray.length; i++) {
+    if (typeof randomArray[i] == 'number') {
+        sortedArrayNew[i] = randomArray[i]
+    }
+    if (typeof randomArray[i] == 'object') {
+        sortedArrayNew[i] = 0
+        for (let j = 0; j < randomArray[i].length; j++) {
+            sortedArrayNew[i] += randomArray[i][j]
+        }
+    }
+}
+
+console.log(sortedArrayNew)
+
+sortedArrayNew = sortedArrayNew.sort(function (a, b) { return a - b });
+
+// Didėjimo tvarka išrūšiuotas masyvas
+console.log(sortedArrayNew);
+
+
+// Antras variantas
+
+// let sortedArray = [];
+
+// for (level1 in randomArray) {
+//     if (typeof randomArray[level1] != 'number') {
+//         sortedArray[level1] = 0;
+//         for (level2 in randomArray[level1]) {
+//             sortedArray[level1] += randomArray[level1][level2];
+//         }
+//     } else {
+//         sortedArray[level1] = randomArray[level1];
+//     }
+// }
+
+// sortedArray = sortedArray.sort(function (a, b) { return a - b });
+
+// console.log(sortedArray);
+
