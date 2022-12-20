@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Navigation</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+body {
+    margin: 0 auto;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.fixed-header{
+        width: 100%;
+        position: fixed;        
+        top: 0;
+}
+
+.navbar {
+    overflow: hidden;
+    background-color: rgba(0,0,0,0.2);
+}
+
+.navbar a {
+    float: left;
+    font-size: 16px;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+
+.dropdown .dropbtn {
+    font-size: 16px;  
+    border: none;
+    outline: none;
+    color: black;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+    background-color: rgba(0,0,0,0.2);
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 1.5em;
+}
+
+.list {
+    line-height: 25px;
+    padding: 10px;
+}
+
+li {
+    font-size: 19px;
+    padding-bottom: 50px;
+}
+
+
+li a {
+    color: black;
+    text-decoration: none
+}
+
+.btn {
+    color: white;
+    background-color: #0687ff;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    padding: 10px;
+    cursor: pointer;
+    margin: 15px;
+    font-size: 16px;
+}
+
+.btn:hover {
+    background-color: #096bc7;
+}
+
+input {
+    width: 130px;
+    padding: 10px 10px;
+    font-size: 15px;
+    border: 1px solid #bdbdbd;
+    border-radius: 10px;
+    margin-right: 10px;
+}
+    
+</style>
+</head>
+<body>
+    <header class="fixed-header">
+        <div class="navbar">
+            <a href="#">Home</a>
+            <div class="dropdown">
+                <button class="dropbtn">Date 
+                <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <ul>
+                        <li><a href="#id-1">2022-11-30</a></li>
+                        <li><a href="#id-2">2022-12-01</a></li>
+                        <li><a href="#id-3">2022-12-05</a></li>
+                        <li><a href="#id-4">2022-12-06</a></li>
+                    </ul>
+                </div>
+            </div> 
+        </div>
+    </header>
+    <div class="container">
+        <div id="id-1" class="section" style="text-align: center;">
+                <h3 style="padding-top: 50px;">2022-11-30</h3>
+                <ol class="list">
+                    <li>Sukurti du kintamuosius. Jiems priskirti savo mylimo aktoriaus vardą ir pavardę kaip stringus (Jonas Jonaitis). Atspausdinti trumpesnį stringą.</a>
+                        <hr>
+                        Aktoriaus vardas: <input type="text" placeholder="Vardas" id="myText" value="">
+                        Aktoriaus pavardė: <input type="text" placeholder="Pavardė" id="myText2" value="">
+                        <br>
+                        <button class="btn" onclick="firstTask()">Atspausdinti trumpesnį stringą</button>
+                    </li>
+                    
+                    <li>Sukurkite 4 kintamuosius, kurie saugotų jūsų vardą, pavardę, gimimo metus ir šiuos metus (nebūtinai tikrus). Parašykite kodą, kuris pagal gimimo metus paskaičiuotų jūsų amžių ir naudodamas vardo ir pavardės kintamuosius atspausdintų tokį sakinį :"Aš esu Vardenis Pavardenis. Man yra XX metai(ų)".
+                        <hr>
+                        Vardas: <input type="text" placeholder="Vardas" id="myText3" value="">
+                        Pavardė: <input type="text" placeholder="Pavardė" id="myText4" value="">
+                        Gimimo metai: <input type="text" placeholder="Gimimo metai" id="myText5" value="">
+                        <br>
+                        <button class="btn" onclick="secondTask()">Atsakymas</button>
+                    </li>
+                    <li>Sukurti du kintamuosius. Jiems priskirti savo mylimo aktoriaus vardą ir pavardę kaip stringus. Sukurti trečią kintamąjį ir jam priskirti stringą, sudarytą iš trijų paskutinių vardo ir pavardės kintamųjų raidžių. Jį atspausdinti.
+                        <hr>
+                        Aktoriaus vardas: <input type="text" placeholder="Vardas" id="myText6" value="">
+                        Aktoriaus pavardė: <input type="text" placeholder="Pavardė" id="myText7" value="">
+                        <br>
+                        <button class="btn" onclick="thirdTask()">Sugeneruoti stringą</button>    
+                    </li>
+                    <li>Sukurti kintamąjį su stringu: “Once upon a time in hollywood”. Jame visas “o” (didžiąsias ir mažąsias) pakeisti žvaigždutėm “*”.  Rezultatą atspausdinti.
+                        <hr>
+                        Stringas: <input type="text" placeholder="Once upon a time..." id="myText8" value="">
+                        <br>
+                        <button class="btn" onclick="fourthTask()">Sugeneruoti stringą</button>
+                    </li>
+                </ol>
+        </div>
+    </div>
+<script>
+    function firstTask() {
+        let celebrityOne = document.getElementById("myText").value;
+        let celebrityTwo = document.getElementById("myText2").value;
+
+        if (celebrityOne.length < celebrityTwo.length) {
+            alert(celebrityOne)
+        } else if (celebrityOne.length == celebrityTwo.length) {
+            alert(celebrityOne + ' ir ' + celebrityTwo + ' yra lygūs')
+        } else {
+            alert(celebrityTwo)
+        }
+    };
+    function secondTask() {
+        let name = document.getElementById("myText3").value
+        let surname = document.getElementById("myText4").value
+        let bornYear = document.getElementById("myText5").value
+        let currentYear = new Date().getFullYear()
+        let age = currentYear - bornYear
+        alert(`Aš esu ${name} ${surname}. Man yra ${age} metai(ų).`)
+    };
+    function thirdTask() {
+        let celebrityOneName = document.getElementById("myText6").value
+        let celebrityOneSurname = document.getElementById("myText7").value
+        let celebrityNew = celebrityOneName.slice(-3) + celebrityOneSurname.slice(-3)
+        alert('Gautas stringas: ' + celebrityNew)
+    };
+    function fourthTask() {
+        let string = document.getElementById("myText8").value
+        string = string.replaceAll('o', '*').replaceAll('O', '*')
+        alert('Atsakymas su pakeistomis o ir O reikšmėmis: ' + string)
+    }
+    
+
+</script>
+</body>
+</html>
