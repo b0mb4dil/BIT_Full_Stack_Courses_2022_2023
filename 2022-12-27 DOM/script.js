@@ -9,11 +9,8 @@ btn.addEventListener('click', function() {
       return response.json();
     })
     .then(function(data) {
-        console.log(data[0])
         let random = Math.floor(Math.random() * data.length);
         quote.innerText = data[random].text;
         person.innerText = data[random].author;
     });
-
-    
 })
