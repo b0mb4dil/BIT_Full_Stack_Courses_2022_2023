@@ -1,32 +1,37 @@
-let addTask = document.getElementById('add-task');
-let taskContainer = document.getElementById('task-container');
-let inputTask = document.getElementById('input-task');
+let addCart = document.getElementById('add-cart');
+let cartContainer = document.getElementById('cart-container');
+let inputCart = document.getElementById('input-cart');
+let inputQuantity = document.getElementById('input-number')
 
-addTask.addEventListener('click', function() {
-    let task = document.createElement('div')
-    task.classList.add('task');
+addCart.addEventListener('click', function() {
+    let cart = document.createElement('div')
+    cart.classList.add('cart');
 
-    let li = document.createElement('li');
-    li.innerText = `${inputTask.value}`;
-    task.appendChild(li);
+    let li1 = document.createElement('li');
+    let li2 = document.createElement('li');
+    li1.innerText = `${inputCart.value}`;
+    li2.innerText = `${inputQuantity.value}`;
+    cart.appendChild(li1);
+    cart.appendChild(li2);
 
     let checkButton = document.createElement("button");
     checkButton.innerHTML = '<i class="fa-solid fa-check"></i>';
-    checkButton.classList.add('checkTask');
-    task.appendChild(checkButton);
+    checkButton.classList.add('checkCart');
+    cart.appendChild(checkButton);
 
     let deleteButton = document.createElement("button");
     deleteButton.innerHTML = '<i class="fa-solid fa-trash-can"></i>';
-    deleteButton.classList.add('deleteTask');
-    task.appendChild(deleteButton);
+    deleteButton.classList.add('deleteCart');
+    cart.appendChild(deleteButton);
 
-    if (inputTask.value === "") {
+    if (inputCart.value === "") {
         alert('Prašome įvesti prekę')
     } else {
-        taskContainer.appendChild(task)
+        cartContainer.appendChild(cart)
     }
 
-    inputTask.value = "";
+    inputCart.value = "";
+    inputQuantity.value = "";
 
     checkButton.addEventListener('click', function() {
         checkButton.parentElement.style.textDecoration = "line-through";

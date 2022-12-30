@@ -9,8 +9,8 @@ body {
     font-family: 'Open Sans', sans-serif;
 }
 
-#add-task-container {
-    width: 350px;
+#add-cart-container {
+    width: 400px;
     padding: 20px;
     background: rgba(255, 255, 255, 0.6);
     box-shadow: 0 0 15px;
@@ -19,13 +19,17 @@ body {
 }
 
 input {
-    flex: 5;
+    flex: 1;
     margin-right: 5px;
     font-size: 1.2rem;
     padding: 5px 5px 5px 10px;
 }
 
-#add-task {
+#input-number {
+    width: 100%;
+}
+
+#add-cart {
     font-size: 1.2rem;
     background: green;
     color: white;
@@ -35,13 +39,13 @@ input {
     transition: .3s;
 }
 
-#add-task:hover {
+#add-cart:hover {
     background: rgb(0, 95, 0);
     font-size: 1.4rem;
 }
 
-/* New task styling */
-.task {
+/* New cart styling */
+.cart {
     font-size: 1.1rem;
     width: 100%;
     background: rgba(255, 255, 255, 0.7);
@@ -53,33 +57,33 @@ input {
     justify-content: space-between;
 }
 
-.task li {
+.cart li {
     list-style: none;
     flex: 4;
     margin: 10px;
     padding: 10px;
 }
 
-.task button {
+.cart button {
     flex: 0.5;
     font-size: 1.3rem;
     cursor: pointer;
     transition: .3s;
 }
 
-.task .checkTask {
+.cart .checkCart {
     color: green;
 }
-.task .checkTask:hover {
+.cart .checkCart:hover {
     background: green;
     color: white;
     font-size: 1.6rem;
     border: none;
 }
-.task .deleteTask {
+.cart .deleteCart {
     color: red;
 }
-.task .deleteTask:hover {
+.cart .deleteCart:hover {
     background: red;
     color: white;
     font-size: 1.5rem;
