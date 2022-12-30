@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app"></div>
+    <script>
+        const url = 'https://www.omdbapi.com/?apikey=8545510c&s=marvel'
+
+        fetch(url)
+        .then(resp => resp.json())
+        .then(resp => {
+            let html = '';
+            resp.Search.map(data => {
+                html += `<div class="movies">
+                    <div class="movie">
+                        <img src="${data.Poster}" alts="${data.Title}" />
+                        <h3>${data.Title}</h3>
+                        <div>
+                            <span>${data.Year}</span>    
+                            <span>${data.Type}</span>    
+                        </div>
+                    </div>
+                `;
+            });
+            html += '</div>'
+            document.getElementById('app').innerHTML = html;
+        })
+    </script>
+</body>
+</html>
