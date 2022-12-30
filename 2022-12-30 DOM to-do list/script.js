@@ -14,6 +14,8 @@ addCart.addEventListener('click', function() {
     cart.appendChild(li1);
     cart.appendChild(li2);
 
+    console.log(isNaN(inputQuantity.value))
+
     let checkButton = document.createElement("button");
     checkButton.innerHTML = '<i class="fa-solid fa-check"></i>';
     checkButton.classList.add('checkCart');
@@ -24,11 +26,16 @@ addCart.addEventListener('click', function() {
     deleteButton.classList.add('deleteCart');
     cart.appendChild(deleteButton);
 
+
     if (inputCart.value === "") {
         alert('Prašome įvesti prekę')
+    } else if (inputQuantity.value < 1) {
+        alert('Prašome įvesti kiekį')
     } else {
         cartContainer.appendChild(cart)
     }
+
+    
 
     inputCart.value = "";
     inputQuantity.value = "";
