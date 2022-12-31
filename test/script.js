@@ -1,11 +1,47 @@
-let myFunction = (a, b) => a * b
-console.log(myFunction(2, 5))
+let textValue = document.getElementById('text-input');
+let textValue2 = document.getElementById('text-input2');
+let sendBtn = document.getElementById('submit-button');
+let showMessages = document.getElementById('messages')
 
-myFunction = 5
-// console.log(myFunction())
 
-console.log(1 == 1)
+let newArray = [
+    {
+        Produktas: 'Bananai',
+        Kaina: 3,
+        Kiekis: 2
+    },
+    {
+        Produktas: 'Pomidorai',
+        Kaina: 2,
+        Kiekis: 3
+    },
+    {
+        Produktas: 'Agurkai',
+        Kaina: 1,
+        Kiekis: 8
+    },
+    {
+        Produktas: 'Moliūgai',
+        Kaina: 15,
+        Kiekis: 2
+    },
+];
 
-for(let i = 1; i < 5; i++) {
-    console.log(i) 
-}
+
+sendBtn.addEventListener('click', function() {
+    showMessages.innerHTML = result;
+})
+
+
+let result = '';
+
+newArray.map(product => {
+    result += `
+        <span>Produkto pavadinimas: ${product.Produktas}</span>
+        <span>Kiekis: ${product.Kiekis}</span>
+        <span>Suma: ${product.Kiekis * product.Kaina}</span>
+        <br>
+    `
+})
+
+console.log(result)
