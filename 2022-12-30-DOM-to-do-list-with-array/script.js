@@ -41,7 +41,6 @@ const addToCart = () => {
 
 
     // Tikrinima ar teisingai įvesti duomenys
-    document.querySelector('.attention').innerHTML = '<span class="dangerAtt"></span>'
 
     if (document.getElementById('input-cart').value === '') {
         document.querySelector('.attention').innerHTML = '<span class="dangerAtt">Prašome įvesti prekę</span>';
