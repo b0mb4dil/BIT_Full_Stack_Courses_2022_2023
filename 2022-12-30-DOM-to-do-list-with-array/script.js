@@ -39,7 +39,10 @@ const addToCart = () => {
         quantity: document.getElementById('input-number').value,
     }
 
+
     // Tikrinima ar teisingai įvesti duomenys
+    document.querySelector('.attention').innerHTML = '<span class="dangerAtt"></span>'
+
     if (document.getElementById('input-cart').value === '') {
         document.querySelector('.attention').innerHTML = '<span class="dangerAtt">Prašome įvesti prekę</span>';
         document.querySelector('.dangerAtt').style.display = 'block';
@@ -48,14 +51,14 @@ const addToCart = () => {
         document.querySelector('.dangerAtt').style.display = 'block';
     } else {
         cartArray.push(productObject);
-        document.querySelector('.attention .dangerAtt').style.display = '';
+        document.querySelector('.dangerAtt').style.display = 'none';
     }
-        
+
     // Nunulinami įvedimo laukeliai
     document.getElementById('input-cart').value = '';
     document.getElementById('input-number').value = '';
-
     showCart();
+
 }
 
 

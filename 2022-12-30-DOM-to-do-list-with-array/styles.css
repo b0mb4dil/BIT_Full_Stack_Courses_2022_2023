@@ -65,7 +65,8 @@ input {
 }
 
 .cart button {
-    flex: 0.5;
+    border: none;
+    flex: 1;
     font-size: 1.3rem;
     cursor: pointer;
     transition: .3s;
