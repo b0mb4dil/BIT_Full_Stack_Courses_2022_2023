@@ -165,7 +165,7 @@
         ]
             
         const showResult = (id) => {
-            document.querySelector('.image').innerHTML = `<img src="${persons[id].image}" alt="" />`;
+            document.querySelector('.image').innerHTML = `<img src="${persons[id].image}" alt="${persons[id].name}" />`;
             document.querySelector('.name').textContent = persons[id].name;
             document.querySelector('.profession').textContent = persons[id].profession;
             document.querySelector('.phone').textContent = persons[id].phone;
