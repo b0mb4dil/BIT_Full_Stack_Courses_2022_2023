@@ -1,12 +1,14 @@
+// Atsitiktinio skaičiaus funkcjia
 function rand(min, max) {
     min = Math.ceil(min);
     max = Math.floor(max);
     return Math.floor(Math.random() * (max - min + 1) + min);
 }
 
-let counter = '0';
+let counter = '0'; 
 let counterComputer = '0';
 
+// Atsitiktinės pozicijos ir spalvos funkcija
 const randomPosition = () => {
     let x = rand(0, 450);
     let y = rand(0, 450);
@@ -22,16 +24,11 @@ const randomPosition = () => {
 
 
 // Žaidėjo taškų skaičiavimas 
-
-
-
-
 let playerClick = document.querySelector('.box').addEventListener('click', function() {
     if (seconds < 10) {
         counter++;
         counterComputer--;
         document.getElementById('player-score').innerText = counter;
-        console.log(seconds)
     }
 })
 
@@ -55,26 +52,27 @@ function stopWatch() {
     seconds++
     document.getElementById('timer').innerText = seconds;
     document.getElementById('player-score').innerText = counter;
-
     document.getElementById('computer-score').innerText = counterComputer;
 
     randomPosition();
     
     counterComputer++;
     document.getElementById('computer-score').innerText = counterComputer;
+    
     if (seconds === 10) {
         if (counter > counterComputer) {
             document.getElementById('winner').style.display = 'flex';
-            document.getElementById('winner').innerText = 'Laimėjo Danielė';
+            document.getElementById('winner').innerText = 'Laimėjo žaidėjas';
         } else if (counter === counterComputer) {
+            document.getElementById('winner').style.display = 'flex';
             document.getElementById('winner').innerText = 'Lygiosios';
         } else {
+            document.getElementById('winner').style.display = 'flex';
             document.getElementById('winner').innerText = 'Laimėjo kompiuteris';
         }
         window.clearInterval(timerInterval);
         timerStatus = "stopped";
-    }
-        
+    }   
 }
 
 
@@ -88,7 +86,6 @@ const timer = () => {
     document.getElementById('winner').style.display = 'none';
 
 
-
     if (timerStatus === "stopped") {
         timerInterval = window.setInterval(stopWatch, 1000);
         timerStatus = "started";
@@ -96,9 +93,6 @@ const timer = () => {
         window.clearInterval(timerInterval);
         timerStatus = "stopped";
     }
-
-
-
 }
 
 
