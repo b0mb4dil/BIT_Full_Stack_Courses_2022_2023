@@ -1,0 +1,88 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 4rem;;
+    font-weight: 700;
+}
+
+.container {
+    max-width: 3000px;
+}
+
+
+#remote {
+    position: relative;
+    margin: 0 auto;
+    width: 850px;
+    height: 2791.5px;
+}
+
+#remote img {
+    width: 850px;
+    height: auto;
+}
+
+.button {
+    position: absolute;
+    border: none;
+    background: none;
+    width: 130px;
+    height: 130px;
+    transition: .35s;
+}
+#remote .button:hover {
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.4);
+    cursor: pointer;
+}
+
+#remote .power-button {
+    top: 142px;
+    left: 131px;
+}
+
+#remote .channel-up {
+    top: 1028px;
+    left: 571px;
+}
+
+#remote .channel-down {
+    top: 1230px;
+    left: 571px;
+}
+
+#remote .sound-up {
+    top: 1028px;
+    left: 149px;
+}
+
+#remote .sound-down {
+    top: 1230px;
+    left: 149px;
+}
+
+#remote .info {
+    top: 320px;
+    left: 131px;
+    height: 100px;
+}
+
+#tv {
+    position: relative;
+}
+
+#tv img {
+    width: 2000px;
+}
+
+#output {
+    position: absolute;
+    width: 1970px;
+    height: 1105px;
+    top: 17px;
+    left: 17px;
+    text-align: center;
+    transition: .3s;    
+}
