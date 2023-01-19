@@ -64,3 +64,11 @@
 .bold {
   font-weight: 600;
 }
+
+.blank {
+  background-color: #eeeeee;
+}
+
+.blank:hover {
+  cursor: not-allowed;
+}

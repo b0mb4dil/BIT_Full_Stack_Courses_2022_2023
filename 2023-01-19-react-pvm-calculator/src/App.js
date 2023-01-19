@@ -70,7 +70,12 @@ function App() {
 					<div className="span-width">
 						<span>PVM suma</span>
 					</div>
-					<input className="inputs" type="number" value={numberPvm} readOnly />
+					<input
+						className="inputs blank"
+						type="number"
+						value={numberPvm}
+						readOnly
+					/>
 				</div>
 				<div className="list-item">
 					<div className="span-width">
