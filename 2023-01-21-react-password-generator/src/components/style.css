@@ -36,9 +36,9 @@ span {
 }
 
 .local-storage {
-  max-width: 500px;
+  max-width: 600px;
   background-color: rgba(255, 255, 255, 0.4);
-  margin: 50px auto;
+  margin: 40px auto;
   padding: 20px;
   font-size: 1.2rem;
   text-align: left;
@@ -52,6 +52,11 @@ span {
 .local-storage h1 {
   text-align: center;
   font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.local-storage li {
+  padding: 3px;
 }
 
 .subContainer {

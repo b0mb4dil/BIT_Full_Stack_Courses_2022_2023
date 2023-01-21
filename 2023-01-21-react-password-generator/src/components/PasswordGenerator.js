@@ -10,6 +10,11 @@ const PasswordGenerator = () => {
 	const [symbols, setSymbols] = useState(true);
 	const [errors, setErrors] = useState({});
 
+	useEffect(() => {
+		// const passwordsStorage = localStorage.getItem("passwords");
+		// setPasswords(JSON.parse(passwordsStorage));
+	}, []);
+
 	const generatePassword = () => {
 		setErrors({});
 		if (!uppercase && !lowercase && !numbers && !symbols) {
@@ -38,10 +43,24 @@ const PasswordGenerator = () => {
 			}
 		}
 		setPassword(password);
+		setPasswords([...passwords, password]);
 
-		// setPasswords([...passwords, password]);
-		// console.log(passwords);
-		// localStorage.setItem("passwords", JSON.stringify(passwords));
+		let passwordsStorage;
+		passwordsStorage = [...passwords, password];
+		console.log(passwordsStorage);
+		if (passwordsStorage.length >= 10) {
+			const last10 = passwordsStorage.slice(-10);
+			passwordsStorage = last10;
+			setPasswords(passwordsStorage);
+		}
+		// if (passwordsStorage.length === 10) {
+		// 	passwordsStorage = [...passwords, password];
+		// } else {
+		// 	passwordsStorage.pop();
+		// 	passwordsStorage = [...passwords, password];
+		// }
+
+		localStorage.setItem("passwords", JSON.stringify(passwordsStorage));
 	};
 
 	const clearPassword = () => {
@@ -64,11 +83,6 @@ const PasswordGenerator = () => {
 		const symbols = "~*$%@#^&!?*'-=/,.{}()[]<>";
 		return symbols[random(0, symbols.length - 1)];
 	};
-
-	useEffect(() => {
-		// const data = localStorage.getItem("passwords");
-		// setPasswords(JSON.parse(data));
-	}, []);
 
 	return (
 		<div className="app">
@@ -150,26 +164,14 @@ const PasswordGenerator = () => {
 					</div>
 				</div>
 			</div>
-			{/* <div className="local-storage">
-				<span>Last 10 generated passwords</span>
-				{passwords.map((password, key) => (
-					<li key={key}>{password}</li>
-				))}
-				;
-			</div> */}
-			<div className="local-storage">
-				<h1>Last 10 generated passwords</h1>
-				<li>A</li>
-				<li>A</li>
-				<li>A</li>
-				<li>A</li>
-				<li>A</li>
-				<li>A</li>
-				<li>A</li>
-				<li>A</li>
-				<li>A</li>
-				<li>A</li>
-			</div>
+			{passwords.length >= 1 && (
+				<div className="local-storage">
+					<h1>Last 10 generated passwords</h1>
+					{passwords.map((password, key) => (
+						<li key={key}>{password}</li>
+					))}
+				</div>
+			)}
 		</div>
 	);
 };
