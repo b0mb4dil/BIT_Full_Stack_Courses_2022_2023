@@ -39,9 +39,9 @@ const PasswordGenerator = () => {
 		}
 		setPassword(password);
 
-		setPasswords([...passwords, password]);
-		console.log(passwords);
-		localStorage.setItem("passwords", JSON.stringify(passwords));
+		// setPasswords([...passwords, password]);
+		// console.log(passwords);
+		// localStorage.setItem("passwords", JSON.stringify(passwords));
 	};
 
 	const clearPassword = () => {
@@ -66,8 +66,8 @@ const PasswordGenerator = () => {
 	};
 
 	useEffect(() => {
-		const data = localStorage.getItem("passwords");
-		setPasswords(JSON.parse(data));
+		// const data = localStorage.getItem("passwords");
+		// setPasswords(JSON.parse(data));
 	}, []);
 
 	return (
@@ -150,9 +150,13 @@ const PasswordGenerator = () => {
 					</div>
 				</div>
 			</div>
-			<div className="local-storage">
-				{passwords.length && <li className="">{passwords}</li>}
-			</div>
+			{/* <div className="local-storage">
+				<span>Last 10 generated passwords</span>
+				{passwords.map((password, key) => (
+					<li key={key}>{password}</li>
+				))}
+				;
+			</div> */}
 		</div>
 	);
 };

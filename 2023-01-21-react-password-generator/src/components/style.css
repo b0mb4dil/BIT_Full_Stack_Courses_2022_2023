@@ -2,6 +2,9 @@
   text-align: center;
   margin-top: 20px;
   font-family: Arial, Helvetica, sans-serif;
+  justify-content: center;
+  align-items: center;
+
 }
 
 span {
@@ -29,26 +32,20 @@ span {
   background-color: rgba(0, 110, 35, 0.5);
   width: 500px;
   height: auto;
-  position: absolute;
-  top: 45%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   border-radius: 15px;
+  margin: 0 auto;
 }
 
 .local-storage {
   height: auto;
-  position: absolute;
-  top: 75%;
-  left: 50%;
-  transform: translate(-50%, -50%);
 }
 
 .subContainer {
   color: white;
-  margin: 20px;
+  padding: 20px;
   text-align: left;
-  font-size: 2vh;
+  font-size: 1.2rem;
+
 }
 
 .option {
@@ -58,8 +55,6 @@ span {
 input[type='number'],
 select {
   box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   border: 1px solid pink;
   padding: 5px;
   margin: 0px;
@@ -69,8 +64,6 @@ select {
 
 input[type='number']:focus,
 select:focus {
-  -moz-box-shadow: 0 0 8px #88d5e9;
-  -webkit-box-shadow: 0 0 8px #88d5e9;
   box-shadow: 0 0 8px #88d5e9;
   border: 1px solid dodgerblue;
 }
@@ -79,7 +72,6 @@ input[type='checkbox'],
 select {
   width: 20px;
   height: 20px;
-  transform: translateY(40%);
   border-radius: 50%;
 }
 
