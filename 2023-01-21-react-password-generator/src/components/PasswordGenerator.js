@@ -11,8 +11,10 @@ const PasswordGenerator = () => {
 	const [errors, setErrors] = useState({});
 
 	useEffect(() => {
-		// const passwordsStorage = localStorage.getItem("passwords");
-		// setPasswords(JSON.parse(passwordsStorage));
+		const data = localStorage.getItem("passwords");
+		if (data) {
+			setPasswords(JSON.parse(data));
+		}
 	}, []);
 
 	const generatePassword = () => {
@@ -53,12 +55,6 @@ const PasswordGenerator = () => {
 			passwordsStorage = last10;
 			setPasswords(passwordsStorage);
 		}
-		// if (passwordsStorage.length === 10) {
-		// 	passwordsStorage = [...passwords, password];
-		// } else {
-		// 	passwordsStorage.pop();
-		// 	passwordsStorage = [...passwords, password];
-		// }
 
 		localStorage.setItem("passwords", JSON.stringify(passwordsStorage));
 	};
