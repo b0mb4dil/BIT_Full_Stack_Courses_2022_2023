@@ -1,0 +1,125 @@
+.app {
+  text-align: center;
+  margin-top: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+span {
+  font-size: 4vh;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+}
+
+.password {
+  background-color: white;
+  color: rgb(99, 99, 99);
+  border: 1px solid black;
+  width: 90%;
+  min-height: 50px;
+  height: auto;
+  text-align: center;
+  margin: 20px auto;
+  padding: 5px;
+  outline: none;
+  font-size: 4vh;
+  border-radius: 8px;
+}
+
+.container {
+  background-color: rgba(0, 110, 35, 0.5);
+  width: 500px;
+  height: auto;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 15px;
+}
+
+.local-storage {
+  height: auto;
+  position: absolute;
+  top: 75%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.subContainer {
+  color: white;
+  margin: 20px;
+  text-align: left;
+  font-size: 2vh;
+}
+
+.option {
+  margin: 15px;
+}
+
+input[type='number'],
+select {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  border: 1px solid pink;
+  padding: 5px;
+  margin: 0px;
+  outline: none;
+  border-radius: 8px;
+}
+
+input[type='number']:focus,
+select:focus {
+  -moz-box-shadow: 0 0 8px #88d5e9;
+  -webkit-box-shadow: 0 0 8px #88d5e9;
+  box-shadow: 0 0 8px #88d5e9;
+  border: 1px solid dodgerblue;
+}
+
+input[type='checkbox'],
+select {
+  width: 20px;
+  height: 20px;
+  transform: translateY(40%);
+  border-radius: 50%;
+}
+
+.option input {
+  float: right;
+}
+
+.button {
+  margin-top: 30px;
+  text-align: center;
+}
+
+input[type='submit'] {
+  background: rgb(15, 115, 0);
+  cursor: pointer;
+  border-radius: 8px;
+  padding: 15px 20px;
+  border: none;
+  color: white;
+  font-weight: bold;
+  font-size: medium;
+  transition: .3s;
+}
+
+input[type='submit']:hover {
+  background: rgb(15, 75, 0);
+}
+
+.error {
+  color: rgb(0, 0, 0);
+  font-size: 3.3vh;
+  font-weight: bold;
+  text-align: center;
+  padding-top: 20px;
+  list-style-type: none;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 20%;
+  margin-right: 20%;
+}
