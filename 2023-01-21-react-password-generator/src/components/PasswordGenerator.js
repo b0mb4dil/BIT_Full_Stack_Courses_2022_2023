@@ -163,9 +163,11 @@ const PasswordGenerator = () => {
 			{passwords.length >= 1 && (
 				<div className="local-storage">
 					<h1>Last 10 generated passwords</h1>
-					{passwords.map((password, key) => (
-						<li key={key}>{password}</li>
-					))}
+					<div className="local-storage-sub">
+						{passwords.map((password, key) => (
+							<li key={key}>{password}</li>
+						))}
+					</div>
 				</div>
 			)}
 		</div>

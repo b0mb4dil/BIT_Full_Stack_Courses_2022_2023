@@ -35,33 +35,9 @@ span {
 
 }
 
-.local-storage {
-  max-width: 600px;
-  background-color: rgba(255, 255, 255, 0.4);
-  margin: 40px auto;
-  padding: 20px;
-  font-size: 1.2rem;
-  text-align: left;
-  border-radius: 15px;
-  color: #333;
-  height: auto;
-  box-shadow: 0 0 40px;
-
-}
-
-.local-storage h1 {
-  text-align: center;
-  font-size: 1.5rem;
-  margin-bottom: 10px;
-}
-
-.local-storage li {
-  padding: 3px;
-}
-
 .subContainer {
   color: white;
-  padding: 20px;
+  padding: 10px;
   text-align: left;
   font-size: 1.2rem;
 
@@ -69,6 +45,36 @@ span {
 
 .option {
   margin: 15px;
+}
+
+.local-storage {
+  max-width: 650px;
+  background-color: rgba(255, 255, 255, 0.5);
+  margin: 30px auto;
+  padding: 20px;
+  font-size: 1.2rem;
+  text-align: left;
+  border-radius: 15px;
+  color: #333;
+  height: auto;
+  box-shadow: 0 0 40px;
+}
+
+.local-storage-sub {
+  text-align: center;
+
+}
+
+.local-storage h1 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  text-align: center;
+
+}
+
+.local-storage li {
+  padding: 5px;
+  list-style-type: none;
 }
 
 input[type='number'],
