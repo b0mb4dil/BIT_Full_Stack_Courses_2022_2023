@@ -4,7 +4,6 @@
   font-family: Arial, Helvetica, sans-serif;
   justify-content: center;
   align-items: center;
-
 }
 
 span {
@@ -17,14 +16,13 @@ span {
   background-color: rgba(255, 255, 255, 0.6);
   color: #333;
   width: 90%;
-  min-height: 50px;
+  min-height: 55px;
   text-align: center;
   margin: 20px auto;
-  padding: 5px;
-  font-size: 2rem;
+  padding: 10px;
+  font-size: 1.8rem;
   border-radius: 8px;
-  box-shadow: 0 0 50px;
-
+  box-shadow: 0 0 40px;
 }
 
 .container {
@@ -33,12 +31,27 @@ span {
   height: auto;
   border-radius: 15px;
   margin: 0 auto;
-  box-shadow: 0 0 50px;
+  box-shadow: 0 0 40px;
 
 }
 
 .local-storage {
+  max-width: 500px;
+  background-color: rgba(255, 255, 255, 0.4);
+  margin: 50px auto;
+  padding: 20px;
+  font-size: 1.2rem;
+  text-align: left;
+  border-radius: 15px;
+  color: #333;
   height: auto;
+  box-shadow: 0 0 40px;
+
+}
+
+.local-storage h1 {
+  text-align: center;
+  font-size: 1.5rem;
 }
 
 .subContainer {
@@ -56,7 +69,7 @@ span {
 input[type='number'],
 select {
   box-sizing: border-box;
-  border: 1px solid pink;
+  border: 1px solid #333;
   padding: 5px;
   margin: 0px;
   outline: none;
@@ -65,8 +78,7 @@ select {
 
 input[type='number']:focus,
 select:focus {
-  box-shadow: 0 0 8px #88d5e9;
-  border: 1px solid dodgerblue;
+  box-shadow: 0 0 15px #45e889;
 }
 
 input[type='checkbox'],
@@ -93,7 +105,8 @@ input[type='submit'] {
   border: none;
   color: white;
   font-weight: bold;
-  font-size: medium;
+  letter-spacing: 1.4px;
+  font-size: 1.1rem;
   transition: .3s;
 }
 

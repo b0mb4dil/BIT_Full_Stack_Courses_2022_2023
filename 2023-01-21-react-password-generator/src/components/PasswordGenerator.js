@@ -19,7 +19,7 @@ const PasswordGenerator = () => {
 		} else if (passwordLength === "") {
 			return setErrors("Invalid password length");
 		} else if (passwordLength > 50) {
-			return setErrors("Password length cannot exceed 50 characters");
+			return setErrors("Password length can`t exceed 50 characters");
 		}
 
 		let password = "";
@@ -157,6 +157,19 @@ const PasswordGenerator = () => {
 				))}
 				;
 			</div> */}
+			<div className="local-storage">
+				<h1>Last 10 generated passwords</h1>
+				<li>A</li>
+				<li>A</li>
+				<li>A</li>
+				<li>A</li>
+				<li>A</li>
+				<li>A</li>
+				<li>A</li>
+				<li>A</li>
+				<li>A</li>
+				<li>A</li>
+			</div>
 		</div>
 	);
 };
