@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 
 const PasswordGenerator = () => {
 	const [password, setPassword] = useState("");
@@ -80,6 +80,19 @@ const PasswordGenerator = () => {
 		return symbols[random(0, symbols.length - 1)];
 	};
 
+	const ref = useRef([]);
+
+	const Unchecked = () => {
+		setUppercase(false);
+		setLowercase(false);
+		setNumbers(false);
+		setSymbols(false);
+		console.log("unchecked");
+		for (let i = 0; i < ref.current.length; i++) {
+			ref.current[i].checked = false;
+		}
+	};
+
 	return (
 		<div className="app">
 			<span>Password Generator</span>
@@ -101,6 +114,9 @@ const PasswordGenerator = () => {
 					<div className="option">
 						<label>Include Uppercase Letters</label>
 						<input
+							ref={(element) => {
+								ref.current[0] = element;
+							}}
 							type="checkbox"
 							name="uppercase"
 							defaultChecked={uppercase}
@@ -111,6 +127,9 @@ const PasswordGenerator = () => {
 					<div className="option">
 						<label>Include Lowercase Letters</label>
 						<input
+							ref={(element) => {
+								ref.current[1] = element;
+							}}
 							type="checkbox"
 							name="lowercase"
 							defaultChecked={lowercase}
@@ -121,6 +140,9 @@ const PasswordGenerator = () => {
 					<div className="option">
 						<label>Include Numbers</label>
 						<input
+							ref={(element) => {
+								ref.current[2] = element;
+							}}
 							type="checkbox"
 							name="numbers"
 							defaultChecked={numbers}
@@ -131,6 +153,9 @@ const PasswordGenerator = () => {
 					<div className="option">
 						<label>Include Symbols</label>
 						<input
+							ref={(element) => {
+								ref.current[3] = element;
+							}}
 							type="checkbox"
 							name="symbols"
 							defaultChecked={symbols}
@@ -154,7 +179,10 @@ const PasswordGenerator = () => {
 								type="submit"
 								name="clear"
 								value="Clear"
-								onClick={clearPassword}
+								onClick={() => {
+									clearPassword();
+									Unchecked();
+								}}
 							/>
 						</div>
 					</div>
