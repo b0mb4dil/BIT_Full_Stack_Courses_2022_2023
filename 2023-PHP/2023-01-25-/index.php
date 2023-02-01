@@ -19,7 +19,6 @@ function generateRandomString($n) {
     fclose($myfile);
 
     return $randomString;
-    exit;
 }
 
 ?>
