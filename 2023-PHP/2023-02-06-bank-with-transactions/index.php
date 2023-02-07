@@ -18,6 +18,9 @@
                 case 'account':
                     include './views/account.php';
                     break;
+                case 'register':
+                    include './views/register.php';
+                    break;    
                 case 'admin':
                     include './views/admin.php';
                     break;

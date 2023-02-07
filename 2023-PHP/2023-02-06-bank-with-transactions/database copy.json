@@ -1,0 +1,79 @@
+[
+	{
+		"id": "admin",
+		"name": "Puslapio",
+		"last_name": "Administratorius",
+		"iban": "",
+		"password": "admin",
+		"role": "1"
+	},
+	{
+		"id": "777",
+		"name": "Ponas",
+		"last_name": "Andersonas",
+		"iban": "LT123",
+		"balance": 7.420000000000002,
+		"password": "777",
+		"role": "0",
+		"history": [
+			{
+				"date": "2023-02-06",
+				"from": "I\u0161",
+				"to": "\u012e",
+				"received": "1",
+				"amount": "100"
+			},
+			{
+				"date": "2024-02-06",
+				"from": "I\u0161",
+				"to": "\u012e",
+				"received": "1",
+				"amount": "200"
+			},
+			{
+				"date": "2024-02-06",
+				"from": "I\u0161",
+				"to": "\u012e",
+				"received": "1",
+				"amount": "200"
+			},
+			{
+				"date": "2024-02-06",
+				"from": "I\u0161",
+				"to": "\u012e",
+				"received": "0",
+				"amount": "200"
+			}
+		]
+	},
+	{
+		"id": "888",
+		"name": "Agentas",
+		"last_name": "Smitas",
+		"iban": "LT999",
+		"balance": 190,
+		"password": "888",
+		"role": "0",
+		"history": []
+	},
+	{
+		"id": "999",
+		"name": "x",
+		"last_name": "Art\u016bras",
+		"iban": "LT2094093275",
+		"password": "999",
+		"balance": "100",
+		"role": "0",
+		"history": []
+	},
+	{
+		"id": "111",
+		"name": "Neo",
+		"last_name": "One",
+		"iban": "LT1889676191",
+		"password": "111",
+		"balance": "100",
+		"role": "0",
+		"history": []
+	}
+]

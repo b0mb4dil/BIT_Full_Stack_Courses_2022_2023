@@ -51,7 +51,10 @@ if($action === 'delete') {
 ?>
 <h1 class="d-flex justify-content-between align-items-center">
     Administratorius
-    <a href="?page=admin&action=new_user" class="btn btn-primary">Nauja sąskaita</a>
+    <div>
+        <a href="?page=admin&action=new_user" class="btn btn-info">Nauja sąskaita</a>
+        <a href="./" class="btn btn-primary">Atsijungti</a>
+    </div>
 </h1>
 
 <?php if(isset($_GET['message'])) : ?>
@@ -157,7 +160,18 @@ if($action === 'delete') {
         <label>Slaptažodis</label>
         <input type="text" name="password" class="form-control" value="<?= $user->password ?>" />
     </div>
-    <button class="btn btn-primary">Sukurti vartotoją</button>
+    <div class="mb-3">
+            <label>Sąskaitos balansas</label>
+            <input type="number" name="balance" class="form-control" />
+    </div>
+    <div class="mb-3">
+            <label>Vartotojo rolė</label>
+            <select name="role" class="form-control">
+                <option value="0">Klientas</option>
+                <option value="1">Administratorius</option>
+            </select>
+    </div>
+    <button class="btn btn-primary">Redaguoti vartotoją</button>
 </form>
 
 <?php endif; ?>

@@ -38,7 +38,7 @@
     }
 ?>
 <link href="css/login.css" rel="stylesheet">
-<main class="form-signin w-100 m-auto">
+<main class="form-signin w-100 m-auto text-center">
     <form method="POST">
         <h1 class="h3 mb-3 fw-normal">Prisijunkite prie banko</h1>
 
@@ -52,5 +52,6 @@
         </div>
 
         <button class="w-100 btn btn-lg btn-primary" type="submit">Prisijungti</button>
+        <a href="?page=register" class="m-2">Neturite paskyros ? Užsiregistruoti</a>
     </form>
 </main>
