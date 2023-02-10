@@ -33,7 +33,7 @@
     echo "</pre>";
 ?>
 <h2>Post New Tweet</h2>
-<form method="POST">
+<form method="POST" class="mb-3">
     <textarea name="tweet" class="form-control mb-3"></textarea>
     <input type="file" name="tweet-photo" class="form-control mb-3">
     <button class="btn btn-primary">Tweet</button>
@@ -41,10 +41,10 @@
 <h1>Latest tweets</h1>
 <?php foreach ($data['tweets'] as $tweet) :?>
     <div class="card shadow-sm mb-3">
-        <div class="card-text p-2">
+        <div class="card-text p-3">
             <?= $tweet['message'] ?>
         </div>
-        <div class="d-flex justify-content-between align-items-center p-2">
+        <div class="d-flex justify-content-between align-items-center p-3">
             <span><?=$tweet['author']?></span>
             <span><?=$tweet['created_at']?></span>
         </div>

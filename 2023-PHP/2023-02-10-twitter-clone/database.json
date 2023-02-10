@@ -1,1 +1,20 @@
-{"users":{"lala123":{"email":"ala@gmail.com","password":"e88e6128e26eeff4daf1f5db07372784","first_name":"Eivydas","last_name":"Gricius","id":"lala123","created_at":"2023-02-10 08:54:11"},"test":{"email":"test@gmail.com","password":"098f6bcd4621d373cade4e832627b4f6","first_name":"Test","last_name":"Test Last","id":"test","created_at":"2023-02-10 08:55:09"},"ups":{"email":"ups@gmail.com","password":"7b0746dabfaed032913530c495453f0f","first_name":"Ups","last_name":"Ups1","id":"ups","created_at":"2023-02-10 08:59:29"},"1":{"email":"1@gmail.com","password":"c4ca4238a0b923820dcc509a6f75849b","first_name":"1","last_name":"1","id":"1","created_at":"2023-02-10 09:13:27"},"2":{"email":"2@gmail.com","password":"c81e728d9d4c2f636f067f89cc14862c","first_name":"2","last_name":"2","id":"2","created_at":"2023-02-10 09:03:10"}},"tweets":[{"message":"test","created_at":"2023-02-10 09:23:28","author":"1"},{"message":"test2","created_at":"2023-02-10 09:23:45","author":"1"},{"message":"test2","created_at":"2023-02-10 09:28:24","author":"1"},{"message":"labas","created_at":"2023-02-10 09:28:31","author":"1"},{"message":"labas","created_at":"2023-02-10 09:29:33","author":"1"},{"message":"labas","created_at":"2023-02-10 09:30:25","author":"2"},{"message":"labas2","created_at":"2023-02-10 09:30:32","author":"2"},{"message":"laba diena","created_at":"2023-02-10 09:37:19","author":"test"},{"message":"laba diena","created_at":"2023-02-10 09:37:50","author":"test"},{"message":"laba diena","created_at":"2023-02-10 09:44:16","author":"test"},{"message":"cheese","created_at":"2023-02-10 09:44:29","author":"test"},{"message":"as","created_at":"2023-02-10 09:45:52","author":"test"},{"message":"as","created_at":"2023-02-10 09:46:49","author":"test"},{"message":"as","created_at":"2023-02-10 10:38:50","author":"test"},{"message":"as","created_at":"2023-02-10 10:39:19","author":"test"}]}
+{
+	"users": {
+		"test": {
+			"email": "test@gmail.com",
+			"password": "098f6bcd4621d373cade4e832627b4f6",
+			"first_name": "Test",
+			"last_name": "Test Last",
+			"id": "test",
+			"created_at": "2023-02-10 08:55:09"
+		},
+		"1": {
+			"email": "1@gmail.com",
+			"password": "c4ca4238a0b923820dcc509a6f75849b",
+			"first_name": "1",
+			"last_name": "1",
+			"id": "1",
+			"created_at": "2023-02-10 04:51:10"
+		}
+	}
+}
