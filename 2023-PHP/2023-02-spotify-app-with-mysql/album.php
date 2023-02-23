@@ -1,4 +1,7 @@
-<?php include("includes/header.php"); 
+<?php 
+include("includes/header.php"); 
+include("includes/classes/Artist.php");
+include("includes/classes/Album.php");
 
 if(isset($_GET['id'])) {
     $albumId = $_GET['id'];
@@ -6,13 +9,26 @@ if(isset($_GET['id'])) {
     header("Location: index.php");
 }
 
-$albumQuery = mysqli_query($con, "SELECT * FROM albums WHERE id='$albumId'");
-$album = mysqli_fetch_array($albumQuery);
+$album = new Album($con, $albumId);
 
-echo ($album['title']);
+$artist = $album->getArtist();
+
 ?>
 
-<h1 class="pageHeading">You Might Also Like</h1>
+<h1 class="pageHeading">Explore</h1>
+
+<div class="entityInfo">
+    <div class="leftSection">
+        <img src="<?php echo $album->getArtworkPath(); ?>">
+    </div>
+
+    <div class="rightSection">
+        <h2><?php echo $album->getTitle(); ?></h2>
+        <p>By <?php echo $artist->getName(); ?></p>
+        <p><?php echo $album->getNumberOfSongs(); ?> songs</p>
+
+    </div>
+</div>
 
 
 <?php include("includes/footer.php"); ?>
