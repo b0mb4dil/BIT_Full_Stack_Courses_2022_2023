@@ -2,12 +2,19 @@ html,
 body {
     margin: 0;
     padding: 0;
-    height: 100%;
+    height: 98vh;
+}
+
+body {
+    background-color: #181818;
+    font-size: 14px;
+    min-width: 720px;
 }
 
 * {
     font-family: Arial, Helvetica, sans-serif;
     color: #fff;
+    letter-spacing: 1px;
 }
 
 .nowPlayingBarContainer {
@@ -148,4 +155,121 @@ body {
 .volumeBar .progressBar {
     margin-bottom: 4px;
     width: 125px;
+}
+
+.topContainer {
+    min-height: 100%;
+    width: 100%;
+}
+
+
+.navbarContainer {
+    background-color: #000;
+    width: 220px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.navbar {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.logo {
+    color: #07d159;
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.logoIcon {
+    text-align: center;
+    text-decoration: none;
+    margin-bottom: 12px;
+}
+
+.logoIcon span {
+    padding: 0 6px;
+    font-weight: 900;
+    color: #07d159;
+}
+
+.navbar .group {
+    border-top: 1px solid #a0a0a0;
+    padding: 10px 0;
+}
+
+.navItem {
+    padding: 12px 0;
+    font-size: 15px;
+    font-weight: 600;
+    display: block;
+    letter-spacing: 1px;
+    position: relative;
+}
+
+.navItemLink {
+    color: #a0a0a0;
+    text-decoration: none;
+}
+
+.searchIcon {
+    color: #a0a0a0;
+    position: absolute;
+    right: 0;
+    top: 8px;
+    font-size: 24px;
+}
+
+.navItemLink:hover {
+    transition: .5s;
+    color: #ffffff;
+}
+
+.mainviewContainer {
+    margin-left: 220px;
+    padding-bottom: 90px;
+    width: calc(100% - 220px);
+}
+
+.mainContent {
+    padding: 20px;
+}
+
+.pageHeading {
+    color: #07d159;
+    padding: 20px;
+}
+
+.gridviewContainer {
+    text-align: center;
+}
+
+.gridviewItem {
+    display: inline-block;
+    margin-right: 30px;
+    margin-bottom: 30px;
+    width: 29%;
+    max-width: 250px;
+    min-width: 150px;
+}
+
+.gridviewItem img {
+    width: 100%;
+}
+
+.gridviewItem a {
+    text-decoration: none;
+}
+
+.gridviewInfo {
+    font-weight: 300;
+    text-align: center;
+    padding: 7px 0;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
 }
