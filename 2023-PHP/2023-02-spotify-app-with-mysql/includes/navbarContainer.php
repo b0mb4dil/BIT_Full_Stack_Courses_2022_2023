@@ -1,28 +1,28 @@
-<div class="navbarContainer">
-    <nav class="navbar">
-        <a href="index.php" class="logoIcon">
-            <i class="bi bi-hurricane logo"></i>
-            <span>TWISTER</span>
-        </a>
+<div id="navBarContainer">
+    <nav class="navBar">
+
+        <span role="link" tabindex="0" onclick="openPage('index.php')" class="logo">
+            <img src="assets/images/icons/logo.png">
+        </span>
 
         <div class="group">
             <div class="navItem">
-                <a href="search.php" class="navItemLink">Search
-                    <i class="bi bi-search navItemLink searchIcon"></i>
-                </a>
+                <span role="link" tabindex="0" onclick="openPage('browse.php')" class="navItemLink">Browse</span>
+            </div>
 
+            <div class="navItem">
+                <span role="link" tabindex="0" onclick="openPage('yourMusic.php')" class="navItemLink">Your Music</span>
+            </div>
+
+            <div class="navItem">
+                <span role="link" tabindex="0"
+                    class="navItemLink"><?php echo $userLoggedIn->getFirstAndLastName(); ?></span>
             </div>
         </div>
-        <div class="group">
-            <div class="navItem">
-                <a href="browse.php" class="navItemLink">Browse</a>
-            </div>
-            <div class="navItem">
-                <a href="yourmusic.php" class="navItemLink">Your music</a>
-            </div>
-            <div class="navItem">
-                <a href="profile.php" class="navItemLink">Eivydas Gricius</a>
-            </div>
+
+        <div class="buttonItems">
+            <button class="button" onclick="logout()">LOGOUT</button>
         </div>
+
     </nav>
 </div>

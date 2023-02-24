@@ -1,33 +1,42 @@
-<?php 
+<?php
 include("includes/config.php");
+include("includes/classes/User.php");
+include("includes/classes/Artist.php");
+include("includes/classes/Album.php");
+include("includes/classes/Song.php");
+include("includes/classes/Playlist.php");
 
-//session_destroy();
 
 if(isset($_SESSION['userLoggedIn'])) {
-    $userLoggedIn = $_SESSION['userLoggedIn'];
-} else {
-    header("Location: register.php");
+	$userLoggedIn = new User($con, $_SESSION['userLoggedIn']);
+	$username = $userLoggedIn->getUsername();
+	echo "<script>userLoggedIn = '$username';</script>";
+}
+else {
+	header("Location: register.php");
 }
 
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href="assets/css/style.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <title>Spotify</title>
 
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="assets/js/script.js"></script>
 </head>
 
 <body>
-    <div class="mainContainer">
-        <div class="topContainer">
-            <?php include("includes/navbarContainer.php"); ?>
-            <div class="mainviewContainer">
-                <div class="mainContent">
+
+    <div id="mainContainer">
+
+        <div id="topContainer">
+
+            <?php include("includes/navBarContainer.php"); ?>
+
+            <div id="mainViewContainer">
+
+                <div id="mainContent">
