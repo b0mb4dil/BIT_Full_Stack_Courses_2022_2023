@@ -87,7 +87,6 @@ function readTransaction(array $transactionLine): array {
 
     [$date, $checkNumber, $description, $amount] = $transactionLine;
 
-
     // Removing all unnecessary symbols from unformatted number. (float) means, that it will return number instead of string.
     $amount = (float) str_replace(['$', ','], '', $amount);
 
@@ -112,7 +111,6 @@ function calculateTotals(array $transactions): array {
             $totals['totalExpense'] += $transaction['amount'];
         }
     }
-
 
     return $totals;
 }

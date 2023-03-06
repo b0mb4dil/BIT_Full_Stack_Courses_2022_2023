@@ -21,6 +21,9 @@
             tfoot tr th {
                 text-align: right;
             }
+            tfoot tr span {
+                font-weight: bold;
+            }
         </style>
     </head>
     <body>
