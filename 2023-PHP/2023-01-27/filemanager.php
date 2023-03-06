@@ -19,6 +19,7 @@ $dir = './';
 
 if(isset($_GET['dir'])) {
     $dir = $_GET['dir'];
+    echo $dir;
 }
 
 if(isset($_POST['file_name']) AND $_POST['file_name'] != '') {
@@ -27,11 +28,11 @@ if(isset($_POST['file_name']) AND $_POST['file_name'] != '') {
 }
 
 $data = scandir($dir);
-print_r($data);
 
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -39,6 +40,7 @@ print_r($data);
     <title>Document</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
+
 <body>
     <div class="container">
         <table class="table">
@@ -49,10 +51,10 @@ print_r($data);
             </thead>
             <tbody>
                 <?php foreach($data as $folder) { ?>
-                    <tr>
-                        <td><?= (is_dir($folder)) ? '<a href="?dir=' . $folder . '">' . $folder . '</a>' : $folder ?></td>
-                    </tr>
-                    
+                <tr>
+                    <td><a href="?dir=<?php echo $folder ?>"><?php echo $folder ?></a></td>
+                </tr>
+
                 <?php } ?>
             </tbody>
         </table>
@@ -72,4 +74,5 @@ print_r($data);
         </form>
     </div>
 </body>
+
 </html>
