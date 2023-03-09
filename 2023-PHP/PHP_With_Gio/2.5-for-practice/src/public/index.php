@@ -2,12 +2,33 @@
 
 declare(strict_types=1);
 
-require_once('./PaymentProfile.php');
-require_once('./Customer.php');
-require_once('./Transaction.php');
+use Ramsey\Uuid\Nonstandard\Uuid;
+use Ramsey\Uuid\Rfc4122\UuidV6;
+use Ramsey\Uuid\UuidFactory;
 
-// Creating new object from class
-$transaction = new Transaction(100, 'Transaction 1');
-   
+// require_once(__DIR__ . '/../app/PaymentGateway/Paddle/Customer.php');
+// require_once(__DIR__ . '/../app/PaymentGateway/Paddle/CustomerProfile.php');
+// require_once(__DIR__ . '/../App/PaymentGateway/Stripe/Customer.php');
+// require_once(__DIR__ . '/../app/PaymentGateway/Stripe/Transaction.php');
 
-var_dump($transaction->customer?->paymentProfile->id);  
+
+
+// spl_autoload_register(function ($class) {
+//     $path = __DIR__ . '/../' . lcfirst(str_replace('\\', '/', $class)) . '.php';
+
+//     if(file_exists($path)) {
+//         require $path;
+//     }
+// });
+
+
+require __DIR__ . '/../vendor/autoload.php';
+
+// $id = new \Ramsey\Uuid\UuidFactory();
+// echo $id->uuid4();
+
+var_dump(new App\PaymentGateway\Paddle\Customer());
+echo '<br />';
+var_dump(new App\PaymentGateway\Paddle\CustomerProfile());
+echo '<br />';
+echo '<br />';
