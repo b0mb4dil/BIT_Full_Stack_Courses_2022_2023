@@ -28,7 +28,7 @@ require __DIR__ . '/../vendor/autoload.php';
 // echo $id->uuid4();
 
 var_dump(new App\PaymentGateway\Paddle\Customer());
-echo '<br />';
+echo '<br />';  
 var_dump(new App\PaymentGateway\Paddle\CustomerProfile());
 echo '<br />';
 echo '<br />';
